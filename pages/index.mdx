@@ -5,6 +5,23 @@ description: Testing MDX and MDX-Bundler
 
 # Hello MDX
 
-import Demo from "../app/components/demo";
+import Demo from "./demo";
 
 <Demo />
+
+```tsx [1, 4..5]
+const App: React.FunctionalComponent<Record<stirng, unknown>> = ({
+  children,
+}) => {
+  return <div>{children}</div>;
+};
+```
+
+<br />
+```css [2]
+.container {
+  display: flex;
+}
+```
+
+<callout-danger>Hello</callout-danger>

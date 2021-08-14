@@ -140,3 +140,42 @@ table {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+pre {
+  overflow: auto;
+}
+
+pre code {
+  display: inline-block;
+  min-width: 100%;
+}
+
+pre [data-line-number]::before {
+  content: attr(data-line-number);
+  display: inline-block;
+  position: sticky;
+  left: 0;
+  width: 3.5rem;
+  padding-right: 1.5rem;
+  text-align: right;
+  background-color: #011627;
+  color: rgba(230, 230, 230, 0.3);
+}
+
+pre .codeblock-line {
+  display: block;
+  position: relative;
+  padding-right: 1.5rem;
+}
+
+pre .codeblock-line[data-hightlight]::before {
+  border-left: 3px solid hotpink;
+}
+
+pre .codeblock-line[data-hightlight]::after {
+  content: " ";
+  position: absolute;
+  inset: 0;
+  background-color: hotpink;
+  filter: opacity(0.2);
+}

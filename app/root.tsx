@@ -1,3 +1,4 @@
+import * as React from 'react'
 import { Outlet } from "react-router-dom";
 import type { LinksFunction } from "remix";
 import { Links, LiveReload, Meta, Scripts } from "remix";
