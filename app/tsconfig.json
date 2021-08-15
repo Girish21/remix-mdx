@@ -1,11 +1,19 @@
 {
   "compilerOptions": {
-    "lib": ["DOM", "DOM.Iterable", "ES2019"],
+    "lib": ["ES2021", "DOM", "DOM.Iterable"],
+    "incremental": true,
+    "isolatedModules": true,
+    "importsNotUsedAsValues": "error",
+    "noEmit": true,
+    "allowJs": true,
     "esModuleInterop": true,
-    "jsx": "react-jsx",
+    "jsx": "react",
     "moduleResolution": "node",
-    "target": "es2019",
+    "module": "es2020",
+    "target": "es2020",
     "strict": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "noUncheckedIndexedAccess": true
   }
 }

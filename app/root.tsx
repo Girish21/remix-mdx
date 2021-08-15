@@ -1,10 +1,15 @@
+import * as React from "react";
 import { Outlet } from "react-router-dom";
 import type { LinksFunction } from "remix";
 import { Links, LiveReload, Meta, Scripts } from "remix";
 import stylesUrl from "./styles/app.css";
+import codeBlockStylesUrl from "./styles/code-block.css";
 
 export let links: LinksFunction = () => {
-  return [{ rel: "stylesheet", href: stylesUrl }];
+  return [
+    { rel: "stylesheet", href: stylesUrl },
+    { rel: "stylesheet", href: codeBlockStylesUrl },
+  ];
 };
 
 function Document({ children }: { children: React.ReactNode }) {
