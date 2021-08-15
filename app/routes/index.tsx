@@ -24,5 +24,11 @@ export default function Index() {
 
   const Component = React.useMemo(() => getMDXComponent(data.code), [data]);
 
-  return <Component />;
+  return (
+    <main className="mx-10vw">
+      <div className="prose max-w-main mx-auto grid grid-cols-4 gap-x-4 md:grid-cols-8 lg:grid-cols-12">
+        <Component />
+      </div>
+    </main>
+  );
 }
