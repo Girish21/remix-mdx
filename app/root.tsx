@@ -8,14 +8,18 @@ import codeBlockStylesUrl from "./styles/code-block.css";
 export let links: LinksFunction = () => {
   return [
     {
-      rel: "preconnect",
-      href: "https://fonts.googleapis.com",
+      rel: "preload",
+      href: "/fonts/Nunito-Regular.ttf",
+      as: "font",
+      type: "font/ttf",
       crossOrigin: "anonymous",
     },
     {
-      rel: "stylesheet",
+      rel: "preload",
+      href: "/fonts/Nunito-Bold.ttf",
       as: "font",
-      href: "https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap",
+      type: "font/ttf",
+      crossOrigin: "anonymous",
     },
     { rel: "stylesheet", href: stylesUrl },
     { rel: "stylesheet", href: codeBlockStylesUrl },
