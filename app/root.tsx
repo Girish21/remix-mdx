@@ -7,6 +7,16 @@ import codeBlockStylesUrl from "./styles/code-block.css";
 
 export let links: LinksFunction = () => {
   return [
+    {
+      rel: "preconnect",
+      href: "https://fonts.googleapis.com",
+      crossOrigin: "anonymous",
+    },
+    {
+      rel: "stylesheet",
+      as: "font",
+      href: "https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap",
+    },
     { rel: "stylesheet", href: stylesUrl },
     { rel: "stylesheet", href: codeBlockStylesUrl },
   ];
